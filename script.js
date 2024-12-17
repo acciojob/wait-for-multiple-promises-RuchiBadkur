@@ -10,25 +10,25 @@ output.innerHTML = `
 const myPromise1 = new Promise ((res, rej)=>{
 	setTimeout(() => {
 		
-		res((Date.now() - now).toString().charAt(0))
+		res(Math.round((Date.now() - now)/1000))
 	}, 2000)
 })
 
 const myPromise2 = new Promise ((res, rej)=>{
 	setTimeout(() => {
-		res((Date.now() - now).toString().charAt(0))
+		res(Math.round((Date.now() - now)/1000))
 	}, 1000)
 })
 
 const myPromise3 = new Promise ((res, rej)=>{
 	setTimeout(() => {
-		res((Date.now() - now).toString().charAt(0))
+		res(Math.round((Date.now() - now)/1000))
 	}, 3000)
 })
 
 
 Promise.all([myPromise1, myPromise2, myPromise3]).then(([p1, p2, p3]) => {
-	// output.innerHTML = ``
+	output.innerHTML = ``
 	output.innerHTML = `
 		<tr>
 			<td>Promise 1</td>
