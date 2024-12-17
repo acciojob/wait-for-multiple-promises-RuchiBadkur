@@ -44,7 +44,7 @@ Promise.all([myPromise1, myPromise2, myPromise3]).then(([p1, p2, p3]) => {
 		</tr>
 		<tr>
 			<td>Total</td>
-			<td>${(Date.now() - now)/1000)}</td>
+			<td>${(Date.now() - now)/1000}</td>
 		</tr>
 	`
 })
