@@ -9,19 +9,20 @@ output.innerHTML = `
 
 const myPromise1 = new Promise ((res, rej)=>{
 	setTimeout(() => {
-		res(Date.now() - now)
+		
+		res((Date.now() - now).toString().charAt(0))
 	}, 2000)
 })
 
 const myPromise2 = new Promise ((res, rej)=>{
 	setTimeout(() => {
-		res(Date.now() - now)
+		res((Date.now() - now).toString().charAt(0))
 	}, 1000)
 })
 
 const myPromise3 = new Promise ((res, rej)=>{
 	setTimeout(() => {
-		res(Date.now() - now)
+		res((Date.now() - now).toString().charAt(0))
 	}, 3000)
 })
 
