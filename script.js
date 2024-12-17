@@ -4,7 +4,7 @@ const now = Date.now();
 
 const output = document.getElementById("output");
 output.innerHTML = `
-	<tr><td colspan="2">Loading...</td></tr>
+	<tr id="loading"><td colspan="2">Loading...</td></tr>
 `
 
 const myPromise1 = new Promise ((res, rej)=>{
@@ -27,7 +27,7 @@ const myPromise3 = new Promise ((res, rej)=>{
 
 
 Promise.all([myPromise1, myPromise2, myPromise3]).then(([p1, p2, p3]) => {
-	output.innerHTML = ``
+	// output.innerHTML = ``
 	output.innerHTML = `
 		<tr>
 			<td>Promise 1</td>
